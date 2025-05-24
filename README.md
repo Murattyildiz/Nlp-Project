@@ -31,15 +31,6 @@ Proje aşağıdaki teknolojileri kullanmaktadır:
 - **Bootstrap**: Responsive tasarım için CSS framework'ü
 - **Hugging Face Transformers**: NLP modellerinin uygulanması için
 - **AOS**: Sayfa animasyonları için JavaScript kütüphanesi
-
-## Hugging Face Kütüphanesi
-
-![Hugging Face Logo](https://time-to-reinvent.com/wp-content/uploads/2022/02/rectangle_large_type_2_6b3d7a7cdfb3af98774ab76a8aa9ef03.png)
-
-Hugging Face Hub, insanların kolayca işbirliği yapabileceği ve birlikte makine öğrenimi oluşturabileceği çevrimiçi bir platformdur. 60K'dan fazla model, 6K veri kümesi ve 6K demo uygulaması (Spaces) içerir. Hub, herkesin Makine Öğrenimi ile keşfedebileceği, deneyebileceği, işbirliği yapabileceği ve teknoloji geliştirebileceği merkezi bir kaynak olarak hizmet vermektedir.
-
-Bu projede doğal dil işleme uygulamalarımızı kolayca kullanabilmek için Hugging Face kütüphanesi ve onun sağladığı gelişmiş dil modelleri tercih edilmiştir.
-
 ## Kullanılan Modeller
 
 ### 1. Metin Özetleme Modeli
