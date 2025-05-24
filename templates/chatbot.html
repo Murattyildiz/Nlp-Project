@@ -1,0 +1,67 @@
+{% extends 'base.html' %}{% load static %} {% block content %}
+
+<section class="anabolum">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h1 data-aos="fade-up" class="mt-5 pt-4">Sohbet Botu</h1>
+        <p class="text-center mb-5 page-description" data-aos="fade-up" data-aos-delay="200">
+          Yapay zeka destekli sohbet botumuzla istediğiniz konuda sohbet edin
+        </p>
+        
+        <div class="chat-container" data-aos="fade-up" data-aos-delay="300">
+          <div class="chat-header">
+            <i class="fas fa-robot me-2"></i> NLP Sohbet Asistanı
+          </div>
+          <div class="chat-messages">
+            {% if result %}
+            <div class="message bot-message">
+              {{ result }}
+            </div>
+            {% else %}
+            <div class="message bot-message">
+              Merhaba! Ben NLP sohbet asistanınızım. Bana bir şeyler sorun, size yardımcı olmak için buradayım.
+            </div>
+            {% endif %}
+          </div>
+          
+          <form action="{% url 'chatbot_sonuc' %}" method="POST" class="chat-input">
+            {% csrf_token %}
+            <input 
+              type="text"
+              name="metin"
+              class="form-control"
+              placeholder="Mesajınızı buraya yazın..."
+              required
+            />
+            <button type="submit" class="btn">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+        
+        <div class="mt-5 form-container" data-aos="fade-up" data-aos-delay="400">
+          <h4 class="form-title">Kapsamlı Mesaj Gönder</h4>
+          <form action="{% url 'chatbot_sonuc' %}" method="POST">
+            {% csrf_token %}
+            <div class="mb-3">
+              <textarea
+                name="metin"
+                class="form-control"
+                placeholder="Daha uzun mesajınızı buraya yazın..."
+                style="height: 150px"
+              ></textarea>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary">
+                <i class="fas fa-robot me-2"></i>Botla Konuş
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

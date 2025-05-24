@@ -1,0 +1,77 @@
+{% extends 'base.html' %}{% load static %} {% block content %}
+
+<section class="anabolum center">
+  <div class="container">
+    <h1 data-aos="fade-up" class="mt-5 pt-4">Doğal Dil İşleme Etkinlikleri</h1>
+    <p class="lead text-center mb-5 page-description" data-aos="fade-up" data-aos-delay="200">
+      Modern yapay zeka teknolojileriyle metinlerinizi analiz edin, özetleyin ve etkileşime geçin
+    </p>
+    
+    <div class="cards">
+      <div class="card" data-aos="fade-up" data-aos-delay="300">
+        <h2 class="card-title">
+          <i class="fas fa-file-alt me-2"></i>Metin Özetleme
+        </h2>
+        <a href="{% url 'metin_summary' %}">
+          <img src="{% static 'pexels-pixabay-261857.jpg' %}" alt="Metin Özetleme" />
+          <div class="card-desc">
+            <h5 class="mb-3">Metinlerinizi Anında Özetleyin</h5>
+            <p>
+              Metin özetleme; bir belgeyi/dokümanı matematiksel yöntemler kullanarak
+              kısa paragraflar veya ifadeler halinde sıkıştırmak anlamına gelmektedir.
+            </p>
+            <div class="text-center mt-3">
+              <span class="btn btn-sm btn-primary">Hemen Deneyin <i class="fas fa-arrow-right ms-1"></i></span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="card" data-aos="fade-up" data-aos-delay="400">
+        <h2 class="card-title">
+          <i class="fas fa-robot me-2"></i>Sohbet Botu
+        </h2>
+        <a href="{% url 'chatbot' %}">
+          <img src="{% static 'pexels-alex-knight-2599244.jpg' %}" alt="Sohbet Botu" />
+          <div class="card-desc">
+            <h5 class="mb-3">Akıllı Sohbet Botu</h5>
+            <p>
+              Sohbet botu, insanlarla doğal bir şekilde konuşarak etkileşim kuran
+              bir yazılım uygulamasıdır.
+            </p>
+            <div class="text-center mt-3">
+              <span class="btn btn-sm btn-primary">Sohbete Başlayın <i class="fas fa-comment ms-1"></i></span>
+            </div>
+          </div>
+        </a>
+      </div>
+      
+      <div class="card" data-aos="fade-up" data-aos-delay="500">
+        <h2 class="card-title">
+          <i class="fas fa-chart-pie me-2"></i>Duygu Durum Analizi
+        </h2>
+        <a href="{% url 'sentiment' %}">
+          <img src="{% static 'wall-5.jpeg' %}" alt="Duygu Durum Analizi" />
+          <div class="card-desc">
+            <h5 class="mb-3">Metin Duygularını Analiz Edin</h5>
+            <p>
+              Duygu analizi, metinlerde ifade edilen duyguları (pozitif, negatif ve nötr) tespit etmeyi amaçlar.
+            </p>
+            <div class="text-center mt-3">
+              <span class="btn btn-sm btn-primary">Analiz Edin <i class="fas fa-search ms-1"></i></span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    
+    <div class="mt-5 text-center" data-aos="fade-up" data-aos-delay="600">
+      <h3 class="mb-4">Yapay Zeka Teknolojisi ile Güçlendirilmiştir</h3>
+      <p class="text-muted">
+        En son doğal dil işleme algoritmaları ve makine öğrenimi modelleriyle geliştirilmiştir
+      </p>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

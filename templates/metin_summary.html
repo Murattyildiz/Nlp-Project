@@ -1,0 +1,54 @@
+{% extends 'base.html' %}{% load static %} {% block content %}
+
+<section class="anabolum">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h1 data-aos="fade-up" class="mt-5 pt-4">Metin Özetleme</h1>
+        <p class="text-center mb-5 page-description" data-aos="fade-up" data-aos-delay="200">
+          Uzun metinlerinizi yapay zeka teknolojisiyle hızlıca özetleyin
+        </p>
+        
+        <div class="form-container" data-aos="fade-up" data-aos-delay="300">
+          <h4 class="form-title"><i class="fas fa-file-alt me-2"></i>Metninizi Girin</h4>
+          <form action="{% url 'metin_summary_sonuc' %}" method="POST">
+            {% csrf_token %}
+            <div class="mb-3">
+              <textarea
+                name="metin"
+                class="form-control"
+                placeholder="Özetlemek istediğiniz metni buraya girin..."
+                style="height: 200px"
+                required
+              ></textarea>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary">
+                <i class="fas fa-magic me-2"></i>Metni Özetle
+              </button>
+            </div>
+          </form>
+        </div>
+        
+        {% if text %}
+        <div class="result-container mt-4" data-aos="fade-up" data-aos-delay="400">
+          <h4 class="result-title"><i class="fas fa-check-circle me-2"></i>Özet Sonucu</h4>
+          <div class="p-3 bg-light rounded">
+            {{ text }}
+          </div>
+        </div>
+        {% endif %}
+        
+        <div class="mt-5 text-center" data-aos="fade-up" data-aos-delay="500">
+          <div class="alert alert-info" role="alert">
+            <i class="fas fa-info-circle me-2"></i>
+            Metin özetleme işlemi, yapay zeka algoritmaları kullanılarak metninizin özünü koruyarak küçültülmesi işlemidir. 
+            En iyi sonuç için detaylı ve uzun metinler kullanmanız önerilir.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

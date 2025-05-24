@@ -1,0 +1,172 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NLP FUN</title>
+    <link href="{% static 'style.css' %}" rel="stylesheet" />
+    <!-- Modern font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome için -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Bootstrap 5.3 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- AOS Animasyon kütüphanesi -->
+    <link
+      href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Modern Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="{% url 'index' %}">
+          <i class="fas fa-brain me-2"></i>NLP FUN
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="{% url 'index' %}" class="nav-link">
+                <i class="fas fa-home me-1"></i> Anasayfa
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="{% url 'metin_summary' %}" class="nav-link">
+                <i class="fas fa-file-alt me-1"></i> Metin Özetleme
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="{% url 'chatbot' %}" class="nav-link">
+                <i class="fas fa-robot me-1"></i> Sohbet Botu
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="{% url 'sentiment' %}" class="nav-link">
+                <i class="fas fa-smile me-1"></i> Duygu Durum Analizi
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Ana İçerik -->
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+
+    <!-- Modern Geliştirilmiş Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-4 mb-md-0">
+            <h5><i class="fas fa-brain me-2"></i>NLP FUN</h5>
+            <p class="footer-text">
+              Doğal dil işleme teknolojileriyle hayatınızı kolaylaştırıyoruz. En son yapay zeka algoritmalarıyla güçlendirilmiş çözümlerimizi deneyin.
+            </p>
+            <div class="footer-text mt-3">
+              <i class="fas fa-envelope me-2"></i> info@nlpfun.com
+            </div>
+          </div>
+          
+          <div class="col-md-4 mb-4 mb-md-0">
+            <h5><i class="fas fa-link me-2"></i>Hızlı Erişim</h5>
+            <ul class="list-unstyled footer-links">
+              <li><a href="{% url 'index' %}"><i class="fas fa-angle-right me-2"></i>Anasayfa</a></li>
+              <li><a href="{% url 'metin_summary' %}"><i class="fas fa-angle-right me-2"></i>Metin Özetleme</a></li>
+              <li><a href="{% url 'chatbot' %}"><i class="fas fa-angle-right me-2"></i>Sohbet Botu</a></li>
+              <li><a href="{% url 'sentiment' %}"><i class="fas fa-angle-right me-2"></i>Duygu Durum Analizi</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-md-4">
+            <h5><i class="fas fa-share-alt me-2"></i>Bizi Takip Edin</h5>
+            <p class="footer-text">Sosyal medya hesaplarımızdan güncel gelişmeleri takip edebilirsiniz.</p>
+            <div class="social-container">
+              <ul class="social-links">
+                <li>
+                  <a href="https://www.linkedin.com/in/murat42yldz/" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/murat42yldz/" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/murattyildiz" target="_blank" title="GitHub">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" title="Twitter">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" title="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="footer-copyright">
+          <div class="row">
+            <div class="col-md-6 text-center text-md-start">
+              <p>&copy; 2025 NLP FUN. Tüm hakları saklıdır.</p>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+              <p>Bu uygulama Murat Yıldız tarafından yapılmıştır.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // AOS animasyon kütüphanesini başlat
+    document.addEventListener("DOMContentLoaded", function () {
+      AOS.init({
+        duration: 800,
+        easing: "ease-in-out",
+      });
+
+      // Sayfa kaydırıldığında navbar arka planını değiştir
+      const navbar = document.querySelector(".navbar");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          navbar.classList.add("navbar-scrolled");
+        } else {
+          navbar.classList.remove("navbar-scrolled");
+        }
+      });
+    });
+  </script>
+</html>
