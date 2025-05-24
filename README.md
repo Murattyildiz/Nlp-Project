@@ -1,7 +1,5 @@
 # NLP FUN - Doğal Dil İşleme Uygulamaları
 
-![NLP FUN Logo](https://static.vecteezy.com/system/resources/previews/008/505/801/non_2x/artificial-intelligence-robot-brain-logo-template-illustration-design-vector.jpg)
-
 ## Proje Hakkında
 NLP FUN, Doğal Dil İşleme (Natural Language Processing - NLP) teknolojilerini kullanıcıların kolay ve hızlı bir şekilde deneyimleyebilmesini sağlayan web tabanlı bir Django uygulamasıdır. 
 
@@ -53,4 +51,4 @@ Bu uygulama Murat Yıldız tarafından geliştirilmiştir.
 
 ---
 
-© 2025 NLP FUN - Tüm hakları saklıdır.
+© 2025 NLP Project - Tüm hakları saklıdır.
